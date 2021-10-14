@@ -1,0 +1,84 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+	background-color: #262626FF;
+}
+div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	height: 100px;
+	width: 100px;
+	transition: 1s;
+	border-radius: 50%;
+	cursor: pointer;
+}
+i{
+	font-size: 50px;
+}
+.twitter{
+	background-color: dodgerblue;
+	box-shadow: 1px 1px 60px dodgerblue;
+}
+.whatsapp{
+	background-color: lime;
+	box-shadow: 1px 1px 60px lime;
+}
+.youtube{
+	background-color: #F7023F7A;
+	box-shadow: 1px 1px 60px #F7023F7A;
+}
+div::after{
+	content: '';
+	display: block;
+	position: absolute;
+	height: 50px;
+	width: 150px;
+	left: 0;
+	font-size: 30px;
+	font-weight: bold;
+	font-family: cursive;
+	transition: 1s;
+	opacity: 0;
+	z-index: -1;
+}
+.twitter::after{
+	content: 'Twitter';
+	color: dodgerblue;
+}
+.whatsapp::after{
+	content: 'Whatsapp';
+	color: lime;
+}
+.youtube::after{
+	content: 'Youtube';
+	color: #F7023F7A;
+}
+.twitter:hover{
+	background-color: transparent;
+	color: dodgerblue;
+	box-shadow: none;
+}
+.whatsapp:hover{
+	background-color: transparent;
+	color: lime;
+	box-shadow: none;
+}
+.youtube:hover{
+	background-color: transparent;
+	color: #F7023F7A;
+	box-shadow: none;
+}
+div:hover::after{
+	opacity: 1;
+	transform: translateX(100px);
+}
